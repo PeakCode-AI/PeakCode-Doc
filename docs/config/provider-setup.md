@@ -57,6 +57,7 @@ codex login
 详细步骤请参考：
 
 - [DeepSeek 配置指南](./deepseek)
+- [MiMo 配置指南](./mimo)
 - [Claude Code 配置](./claude-code)
 
 ---

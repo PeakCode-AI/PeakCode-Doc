@@ -43,6 +43,7 @@ export default defineConfig({
           { text: 'Provider 配置', link: '/config/provider-setup' },
           { text: 'DeepSeek 配置指南', link: '/config/deepseek' },
           { text: 'Claude Code 配置', link: '/config/claude-code' },
+          { text: 'MiMo 配置指南', link: '/config/mimo' },
           { text: '高级配置', link: '/config/advanced' }
         ]
       },
