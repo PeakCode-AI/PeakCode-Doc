@@ -73,6 +73,10 @@ npm install -g @anthropic-ai/claude-code
 - **桌面版**: 从 [Releases](https://github.com/PeakCode-AI/PeakCode/releases) 下载最新版本覆盖安装
 - **源码版**: `git pull` 然后 `bun install`
 
+### Q: Claude Agent 能用 DeepSeek 吗？
+
+A: DeepSeek 只支持 OpenAI 协议，Claude Agent 使用 Anthropic 协议，两者不兼容。需要借助 [CCswitch](https://github.com/farion1231/cc-switch) 的本地代理做协议转换。详见 [DeepSeek 配置指南](../config/deepseek)。
+
 ### Q: 代码安全吗？会上传到云端吗？
 
 PeakCode 的核心设计理念是**代码保留在本地**。你的代码不会上传到 PeakCode 的服务器。
