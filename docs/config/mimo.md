@@ -19,7 +19,7 @@
 打开终端，编辑配置文件：
 
 ```powershell
-notepad C:\Users\Administrator\.codex\config.toml
+notepad %USERPROFILE%\.codex\config.toml
 ```
 
 写入以下内容：
@@ -40,7 +40,7 @@ base_url = "https://token-plan-cn.xiaomimimo.com/v1"
 ### 第二步：配置 API Key
 
 ```powershell
-notepad C:\Users\Administrator\.codex\auth.json
+notepad %USERPROFILE%\.codex\auth.json
 ```
 
 写入以下内容（把 你的API Key 替换成真实 Key）：
@@ -56,7 +56,7 @@ notepad C:\Users\Administrator\.codex\auth.json
 ### 第三步：配置 PeakCode 添加模型
 
 ```powershell
-notepad C:\Users\Administrator\.peakcode\userdata\settings.json
+notepad %USERPROFILE%\.peakcode\userdata\settings.json
 ```
 
 找到 codex 部分，修改为：
@@ -93,7 +93,7 @@ MiMo 官方提供了兼容 Anthropic 接口协议的端点，所以 Claude Agent
 编辑配置文件：
 
 ```powershell
-notepad C:\Users\Administrator\.claude\settings.json
+notepad %USERPROFILE%\.claude\settings.json
 ```
 
 写入以下内容（把 你的API Key 替换成真实 Key）：
@@ -112,7 +112,7 @@ notepad C:\Users\Administrator\.claude\settings.json
 ### 第二步：配置 PeakCode Claude Agent
 
 ```powershell
-notepad C:\Users\Administrator\.peakcode\userdata\settings.json
+notepad %USERPROFILE%\.peakcode\userdata\settings.json
 ```
 
 找到 claudeAgent 部分，修改为：

@@ -44,7 +44,7 @@ codex --version
 打开终端，编辑配置文件：
 
 ```powershell
-notepad C:\Users\Administrator\.codex\config.toml
+notepad ~/.codex/config.toml
 ```
 
 如果文件不存在，直接新建。写入以下内容：
@@ -65,7 +65,7 @@ base_url = "https://api.deepseek.com/v1"
 ### 3.2 配置 API Key
 
 ```powershell
-notepad C:\Users\Administrator\.codex\auth.json
+notepad ~/.codex/auth.json
 ```
 
 写入以下内容（把 你的API Key 替换成真实 Key）：
@@ -98,7 +98,7 @@ notepad C:\Users\Administrator\.codex\auth.json
 如果 PeakCode 设置界面不方便操作，可以直接编辑配置文件：
 
 ```powershell
-notepad C:\Users\Administrator\.peakcode\userdata\settings.json
+notepad ~/.peakcode/userdata/settings.json
 ```
 
 找到 codex 部分，修改为：
@@ -143,7 +143,7 @@ npm install -g @anthropic-ai/claude-code
 编辑 ~/.claude/settings.json：
 
 ```powershell
-notepad C:\Users\Administrator\.claude\settings.json
+notepad ~/.claude/settings.json
 ```
 
 写入：
@@ -157,13 +157,14 @@ notepad C:\Users\Administrator\.claude\settings.json
 }
 ```
 
-> 注意：DeepSeek 不完全兼容 Anthropic 协议，Claude Agent 用 DeepSeek 可能会有功能限制。
-> 建议日常使用 Codex Agent + DeepSeek 的组合。
+> 注意：DeepSeek 官方没有提供原生 Anthropic 协议端点。这里使用 OpenAI 兼容端点作为 ANTHROPIC_BASE_URL，
+> Claude Agent 用 DeepSeek 可能会有功能限制或兼容性问题。
+> 建议日常使用 Codex Agent + DeepSeek 的组合。如需通过 Claude Agent 使用第三方模型，推荐使用 MiMo（提供了原生 Anthropic 兼容端点）。
 
 ### 更新 PeakCode Claude Agent 配置
 
 ```powershell
-notepad C:\Users\Administrator\.peakcode\userdata\settings.json
+notepad ~/.peakcode/userdata/settings.json
 ```
 
 找到 claudeAgent 部分：
