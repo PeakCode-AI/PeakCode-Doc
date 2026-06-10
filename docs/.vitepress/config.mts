@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/PeakCode-Doc/',
   title: 'Peak Code',
   description: 'Peak Code 用户文档 — AI 编程代理的图形界面',
   lang: 'zh-CN',
