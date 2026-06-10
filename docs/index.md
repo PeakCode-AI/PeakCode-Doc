@@ -6,7 +6,7 @@ hero:
   text: AI 编程代理的图形界面
   tagline: 统一的精美界面，支持 Claude Code、Codex、Gemini、Kilo Code、OpenCode 等多个 AI 代理。
   image:
-    src: /logo.svg
+    src: /logo.png
     alt: Peak Code
   actions:
     - theme: brand
