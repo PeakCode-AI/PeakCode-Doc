@@ -4,14 +4,15 @@
 
 ### Q: 安装后无法打开 PeakCode？
 
-A: 
-- **macOS**: 前往 系统设置 → 隐私与安全性，点击"仍要打开"
-- **Windows**: 确保已安装所有必要的运行时依赖
-- **Linux**: 确保已安装 FUSE 库（AppImage 需要）
+**macOS**: 前往 系统设置 → 隐私与安全性，点击"仍要打开"。
+
+**Windows**: 确保已安装所有必要的运行时依赖。
+
+**Linux**: 确保已安装 FUSE 库（AppImage 需要）。
 
 ### Q: 提示"找不到 codex 命令"？
 
-A: 确保已全局安装 Codex CLI：
+确保已全局安装 Codex CLI：
 
 ```bash
 npm install -g @openai/codex
@@ -21,63 +22,74 @@ npm install -g @openai/codex
 
 ### Q: 提示"找不到 claude 命令"？
 
-A: 确保已全局安装 Claude Code CLI：
+确保已全局安装 Claude Code CLI：
 
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
+---
+
 ## 配置问题
 
 ### Q: 模型列表里看不到 DeepSeek？
 
-A: 
 1. 重启 PeakCode
 2. 检查 `~/.codex/config.toml` 格式是否正确
 3. 检查 `~/.peakcode/userdata/settings.json` 中 `customModels` 是否包含 DeepSeek 模型名
 
+详见 [DeepSeek 配置指南](../config/deepseek)。
+
 ### Q: 报错 "API Error: 401 Unauthorized"？
 
-A: 检查 API Key 配置：
+检查 API Key 配置：
+
 - Codex: 检查 `~/.codex/auth.json` 中的 Key 是否正确
 - Claude: 检查 `~/.claude/settings.json` 中的 Key 是否正确
-- 注意不要有多余的空格或引号
+
+注意不要有多余的空格或引号。
 
 ### Q: 报错 "API Error: 404 Not Found"？
 
-A: 检查 `base_url` 配置是否正确：
+检查 `base_url` 配置是否正确：
+
 - DeepSeek: `https://api.deepseek.com/v1`
 - OpenAI: `https://api.openai.com/v1`
 
 ### Q: 想切换回 OpenAI 模型？
 
-A: 把 `~/.codex/config.toml` 中的 `model_provider` 改回 `"openai"`，然后运行 `codex login` 登录 OpenAI 账号。
+把 `~/.codex/config.toml` 中的 `model_provider` 改回 `"openai"`，然后运行 `codex login` 登录 OpenAI 账号。
+
+---
 
 ## 使用问题
 
 ### Q: 会话数据在哪里？
 
-A: 会话数据存储在 PeakCode 的家目录中：
-- Windows: `%USERPROFILE%\.peakcode\`
-- macOS/Linux: `~/.peakcode/`
+会话数据存储在 PeakCode 的家目录中：
+
+| 平台 | 路径 |
+| --- | --- |
+| Windows | `%USERPROFILE%\.peakcode\` |
+| macOS | `~/.peakcode/` |
+| Linux | `~/.peakcode/` |
 
 ### Q: 如何更新 PeakCode？
 
-A: 
-- 桌面版：从 [Releases](https://github.com/PeakCode-AI/PeakCode/releases) 下载最新版本覆盖安装
-- 源码版：`git pull` 然后 `bun install`
-
-### Q: 如何查看 AI 的工具调用记录？
-
-A: 在会话界面中，工具调用会实时显示在对话流中。你可以看到 AI 调用了哪些工具、输入了什么参数、返回了什么结果。
+- **桌面版**: 从 [Releases](https://github.com/PeakCode-AI/PeakCode/releases) 下载最新版本覆盖安装
+- **源码版**: `git pull` 然后 `bun install`
 
 ### Q: 代码安全吗？会上传到云端吗？
 
-A: PeakCode 的核心设计理念是**代码保留在本地**。你的代码不会上传到 PeakCode 的服务器。AI 代理调用 API 时，代码片段会发送到对应的 AI 提供商（如 OpenAI、Anthropic），但 PeakCode 本身不存储你的代码。
+PeakCode 的核心设计理念是**代码保留在本地**。你的代码不会上传到 PeakCode 的服务器。
+
+AI 代理调用 API 时，代码片段会发送到对应的 AI 提供商（如 OpenAI、Anthropic），但 PeakCode 本身不存储你的代码。
+
+---
 
 ## 社区与支持
 
-遇到问题或有建议？可以通过以下渠道反馈：
+遇到问题或有建议？
 
 - [GitHub Issues](https://github.com/PeakCode-AI/PeakCode/issues) — 报告 Bug 和请求功能
 - [Discord](https://discord.gg/jn4EGJjrvv) — 社区讨论

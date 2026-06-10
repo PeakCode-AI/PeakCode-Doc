@@ -10,6 +10,16 @@ Peak Code 支持多种 AI 代理提供商，本页介绍如何配置它们。
 2. 配置 API Key
 3. 在 Peak Code 中启用
 
+::: tip 配置文件位置
+| 平台 | 配置目录 |
+| --- | --- |
+| macOS | `~/.peakcode/` |
+| Windows | `%USERPROFILE%\.peakcode\` |
+| Linux | `~/.peakcode/` |
+:::
+
+---
+
 ## Claude Code
 
 ### 安装
@@ -33,6 +43,8 @@ claude login
 3. 确保 `enabled` 为 `true`
 4. 设置 `binaryPath` 为 `claude`（或完整路径）
 
+---
+
 ## Codex (OpenAI)
 
 ### 安装
@@ -54,23 +66,21 @@ codex login
 3. 确保 `enabled` 为 `true`
 4. 设置 `binaryPath` 为 `codex`
 
+---
+
 ## Gemini
 
 ### 安装
 
 参考 [Gemini CLI 官方文档](https://github.com/google-gemini/gemini-cli)。
 
-### 配置 API Key
-
-```bash
-gcloud auth login
-```
-
 ### 在 Peak Code 中启用
 
 1. 打开 Peak Code **设置**
 2. 找到 **Gemini** 配置区域
 3. 启用并配置路径
+
+---
 
 ## 使用第三方模型
 
@@ -82,19 +92,13 @@ gcloud auth login
 - [Claude Code 配置](./claude-code) — 让 Claude Code 使用其他模型
 - [高级配置](./advanced) — 更多自定义选项
 
-## 配置文件位置
+---
 
-| 平台 | 配置目录 |
-|------|----------|
-| macOS | `~/.peakcode/` |
-| Windows | `%USERPROFILE%\.peakcode\` |
-| Linux | `~/.peakcode/` |
+## 配置文件汇总
 
-主要配置文件：
-
-| 文件 | 用途 |
-|------|------|
-| `userdata/settings.json` | PeakCode 界面和代理配置 |
-| `~/.codex/config.toml` | Codex CLI 模型配置 |
-| `~/.codex/auth.json` | Codex CLI API Key |
-| `~/.claude/settings.json` | Claude Code 配置 |
+| 文件 | 路径 | 用途 |
+| --- | --- | --- |
+| `config.toml` | `~/.codex/config.toml` | Codex 模型和 provider 配置 |
+| `auth.json` | `~/.codex/auth.json` | Codex API Key 存储 |
+| `settings.json` | `~/.peakcode/userdata/settings.json` | PeakCode 界面配置 |
+| `settings.json` | `~/.claude/settings.json` | Claude Code 配置 |

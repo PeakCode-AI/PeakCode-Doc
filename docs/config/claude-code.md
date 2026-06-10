@@ -4,9 +4,10 @@
 
 ## 前置条件
 
-- 已安装 PeakCode 桌面版
-- 已安装 Node.js（v18+）
-- 有效的 Anthropic API Key
+| 项目 | 要求 |
+| --- | --- |
+| Node.js | v18+ |
+| Anthropic API Key | 有效的 API Key |
 
 ## 安装 Claude Code CLI
 
@@ -79,14 +80,5 @@ nano ~/.claude/settings.json
 
 ::: warning
 非 Anthropic 模型可能不完全兼容 Claude Code 的所有功能。
+详细配置请参考 [DeepSeek 配置指南](./deepseek)。
 :::
-
-## 常见问题
-
-### Q: Claude Code 安装后找不到命令？
-
-A: 确保 npm 全局安装路径已添加到系统 PATH。可以运行 `npm root -g` 查看全局安装路径。
-
-### Q: 报错 "Invalid API Key"？
-
-A: 检查 `~/.claude/settings.json` 中的 API Key 是否正确，注意不要有多余的空格或引号。

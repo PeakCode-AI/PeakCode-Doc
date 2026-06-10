@@ -4,10 +4,12 @@
 
 ## 前置条件
 
-- Windows 10/11 系统（macOS/Linux 类似）
-- 已安装 Node.js（v18 或更高版本）
-- 已安装 PeakCode 桌面版
-- 已注册 DeepSeek 账号（[platform.deepseek.com](https://platform.deepseek.com)）
+| 项目 | 要求 |
+| --- | --- |
+| 操作系统 | Windows 10/11（macOS/Linux 类似） |
+| Node.js | v18 或更高版本 |
+| PeakCode | 已安装桌面版 |
+| DeepSeek 账号 | [platform.deepseek.com](https://platform.deepseek.com) |
 
 ---
 
@@ -140,7 +142,9 @@ nano ~/.peakcode/userdata/settings.json
 4. 在底部模型选择栏中，选择 `deepseek-chat`
 5. 发送消息测试，例如：「你好，请介绍一下自己」
 
+::: tip
 如果能正常回复，说明配置成功。
+:::
 
 ---
 
@@ -200,7 +204,7 @@ DeepSeek 不完全兼容 Anthropic 协议，Claude Agent 用 DeepSeek 可能会�
 ## 可用模型说明
 
 | 模型名 | 说明 | 特点 |
-|--------|------|------|
+| --- | --- | --- |
 | `deepseek-chat` | DeepSeek V3 | 通用对话，性价比高 |
 | `deepseek-reasoner` | DeepSeek R1 | 深度推理，适合复杂问题 |
 
@@ -209,7 +213,7 @@ DeepSeek 不完全兼容 Anthropic 协议，Claude Agent 用 DeepSeek 可能会�
 ## 配置文件位置汇总
 
 | 文件 | 路径 | 用途 |
-|------|------|------|
+| --- | --- | --- |
 | `config.toml` | `~/.codex/config.toml` | Codex 模型和 provider 配置 |
 | `auth.json` | `~/.codex/auth.json` | API Key 存储 |
 | `settings.json` | `~/.peakcode/userdata/settings.json` | PeakCode 界面配置 |

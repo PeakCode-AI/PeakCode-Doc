@@ -5,7 +5,7 @@
 ## 前置条件
 
 | 工具 | 版本要求 |
-|------|----------|
+| --- | --- |
 | [Bun](https://bun.sh/) | 最新版 |
 | [Node.js](https://nodejs.org/) | 24+ |
 | [Git](https://git-scm.com/) | 2.30+ |
@@ -22,17 +22,10 @@ bun install
 ## 开发模式
 
 ```bash
-# 完整开发环境（Web UI + 服务器）
-bun run dev
-
-# 仅服务器
-bun run dev:server
-
-# 仅 Web UI
-bun run dev:web
-
-# 桌面应用
-bun run dev:desktop
+bun run dev          # 完整开发环境（Web UI + 服务器）
+bun run dev:server   # 仅服务器
+bun run dev:web      # 仅 Web UI
+bun run dev:desktop  # 桌面应用
 ```
 
 ## 项目结构
@@ -55,8 +48,8 @@ PeakCode/
 ### Web 版
 
 ```bash
-bun run build
-bun run preview    # 预览构建结果
+bun run build       # 构建生产版本
+bun run preview     # 预览构建结果
 ```
 
 ### 桌面版
@@ -76,11 +69,6 @@ bun run fmt         # oxfmt 格式化
 bun run typecheck   # TypeScript 类型检查
 ```
 
-## 隔离开发
-
-与现有 Peak Code 实例并行运行，避免端口冲突：
-
-```bash
-PEAKCODE_PORT_OFFSET=3158 PEAKCODE_NO_BROWSER=1 \
-  bun run dev -- --home-dir ./.peakcode-dev --port 58090
-```
+::: tip 建议
+提交代码前建议跑一遍完整的质量检查，确保没有引入新问题。
+:::

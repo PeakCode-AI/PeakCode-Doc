@@ -4,21 +4,21 @@ Peak Code 最大的特点之一，就是让你在一个窗口中管理多个 AI 
 
 ## 支持的代理
 
-| 提供商 | 说明 | 状态 |
-|--------|------|------|
-| Claude Code | Anthropic 的编程代理 | 已支持 |
-| Codex (OpenAI) | OpenAI 的编程代理 | 已支持 |
-| Gemini | Google 的编程代理 | 已支持 |
-| Kilo Code | 开源编程代理 | 已支持 |
-| OpenCode | 开源编程代理 | 已支持 |
+| 代理 | 提供商 | 状态 | 说明 |
+| --- | --- | --- | --- |
+| Claude Code | Anthropic | 已支持 | 代码理解能力强，适合复杂重构 |
+| Codex | OpenAI | 已支持 | 通用编程，OpenAI 生态 |
+| Gemini | Google | 已支持 | 长上下文窗口，适合大型项目 |
+| Kilo Code | 开源 | 已支持 | 可自定义和扩展 |
+| OpenCode | 开源 | 已支持 | 可自定义和扩展 |
 
 ## 为什么需要多代理支持？
 
 不同的 AI 代理在不同场景下各有优势：
 
-- **Claude Code** — 代码理解能力强，适合复杂重构
+- **Claude Code** — 代码理解能力强，适合复杂重构和代码审查
 - **Codex** — OpenAI 生态，适合通用编程任务
-- **Gemini** — Google 的长上下文窗口，适合大型项目
+- **Gemini** — Google 的长上下文窗口，适合分析大型代码库
 - **Kilo Code / OpenCode** — 开源方案，可自定义和扩展
 
 Peak Code 让你无需在多个终端窗口之间切换，所有代理都在一个界面中管理。
@@ -38,6 +38,10 @@ Peak Code 让你无需在多个终端窗口之间切换，所有代理都在一�
 - 用 Codex 处理日常编码
 - 用 Claude Code 进行代码审查
 - 用 Gemini 分析大型代码库
+
+::: tip
+每个代理的会话是独立的，切换代理不会影响其他会话的上下文。
+:::
 
 ## 配置代理
 

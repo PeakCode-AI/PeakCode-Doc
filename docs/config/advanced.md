@@ -4,27 +4,25 @@
 
 ## 环境变量
 
-Peak Code 支持通过环境变量进行配置：
-
 | 变量 | 说明 | 默认值 |
-|------|------|--------|
+| --- | --- | --- |
 | `PEAKCODE_PORT_OFFSET` | 端口偏移量，用于隔离开发 | `0` |
 | `PEAKCODE_NO_BROWSER` | 启动时不自动打开浏览器 | `0` |
 | `PEAKCODE_AUTH_TOKEN` | 认证 Token | 自动生成 |
 
 ## 隔离开发
 
-如果你想同时运行多个 Peak Code 实例，避免端口冲突：
+与现有 Peak Code 实例并行运行，避免端口冲突：
 
 ```bash
+# macOS / Linux
+PEAKCODE_PORT_OFFSET=3158 PEAKCODE_NO_BROWSER=1 \
+  bun run dev -- --home-dir ./.peakcode-dev --port 58090
+
 # Windows
 set PEAKCODE_PORT_OFFSET=3158
 set PEAKCODE_NO_BROWSER=1
 bun run dev -- --home-dir ./.peakcode-dev --port 58090
-
-# macOS / Linux
-PEAKCODE_PORT_OFFSET=3158 PEAKCODE_NO_BROWSER=1 \
-  bun run dev -- --home-dir ./.peakcode-dev --port 58090
 ```
 
 ## 自定义模型
@@ -63,11 +61,13 @@ PeakCode 默认使用 `~/.peakcode/` 作为家目录。你可以通过 `homePath
 }
 ```
 
+---
+
 ## 架构概览
 
-PeakCode 采用分层客户端-服务器架构：
+Peak Code 采用分层客户端-服务器架构：
 
-```
+```text
 浏览器 / 桌面 (React + Vite + Electron)
         │ WebSocket
         ▼
@@ -78,7 +78,7 @@ PeakCode 采用分层客户端-服务器架构：
 ```
 
 | 层 | 关键组件 |
-|----|----------|
+| --- | --- |
 | 展示层 | React UI、Zustand 状态管理、主题系统 |
 | 应用层 | Native API、事件处理器、WebSocket 传输 |
 | 领域层 | 编排引擎、领域事件、状态投影 |
