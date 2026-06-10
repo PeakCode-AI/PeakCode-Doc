@@ -12,8 +12,6 @@
 
 ### Q: 提示"找不到 codex 命令"？
 
-确保已全局安装 Codex CLI：
-
 ```bash
 npm install -g @openai/codex
 ```
@@ -21,8 +19,6 @@ npm install -g @openai/codex
 安装后重启终端和 PeakCode。
 
 ### Q: 提示"找不到 claude 命令"？
-
-确保已全局安装 Claude Code CLI：
 
 ```bash
 npm install -g @anthropic-ai/claude-code
@@ -66,13 +62,11 @@ npm install -g @anthropic-ai/claude-code
 
 ### Q: 会话数据在哪里？
 
-会话数据存储在 PeakCode 的家目录中：
-
 | 平台 | 路径 |
-| --- | --- |
-| Windows | `%USERPROFILE%\.peakcode\` |
-| macOS | `~/.peakcode/` |
-| Linux | `~/.peakcode/` |
+|------|------|
+| Windows | %USERPROFILE%\.peakcode\ |
+| macOS | ~/.peakcode/ |
+| Linux | ~/.peakcode/ |
 
 ### Q: 如何更新 PeakCode？
 
@@ -88,8 +82,6 @@ AI 代理调用 API 时，代码片段会发送到对应的 AI 提供商（如 O
 ---
 
 ## 社区与支持
-
-遇到问题或有建议？
 
 - [GitHub Issues](https://github.com/PeakCode-AI/PeakCode/issues) — 报告 Bug 和请求功能
 - [Discord](https://discord.gg/jn4EGJjrvv) — 社区讨论

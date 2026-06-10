@@ -1,14 +1,12 @@
 # 高级配置
 
-本页介绍 Peak Code 的高级配置选项。
-
 ## 环境变量
 
 | 变量 | 说明 | 默认值 |
-| --- | --- | --- |
-| `PEAKCODE_PORT_OFFSET` | 端口偏移量，用于隔离开发 | `0` |
-| `PEAKCODE_NO_BROWSER` | 启动时不自动打开浏览器 | `0` |
-| `PEAKCODE_AUTH_TOKEN` | 认证 Token | 自动生成 |
+|------|------|--------|
+| PEAKCODE_PORT_OFFSET | 端口偏移量，用于隔离开发 | 0 |
+| PEAKCODE_NO_BROWSER | 启动时不自动打开浏览器 | 0 |
+| PEAKCODE_AUTH_TOKEN | 认证 Token | 自动生成 |
 
 ## 隔离开发
 
@@ -18,54 +16,22 @@
 # macOS / Linux
 PEAKCODE_PORT_OFFSET=3158 PEAKCODE_NO_BROWSER=1 \
   bun run dev -- --home-dir ./.peakcode-dev --port 58090
-
-# Windows
-set PEAKCODE_PORT_OFFSET=3158
-set PEAKCODE_NO_BROWSER=1
-bun run dev -- --home-dir ./.peakcode-dev --port 58090
 ```
 
 ## 自定义模型
 
-在 PeakCode 设置中，你可以添加自定义模型：
-
-1. 打开设置 → Codex 配置
-2. 在 `customModels` 数组中添加模型名
-3. 重启 PeakCode
-
-示例：
+在 PeakCode 设置中，打开 **⚙️ 设置 → Codex → Custom models**，添加模型名：
 
 ```json
 "codex": {
   "enabled": true,
   "binaryPath": "codex",
-  "customModels": [
-    "deepseek-chat",
-    "deepseek-reasoner",
-    "moonshot-v1-8k"
-  ],
+  "customModels": ["deepseek-chat", "deepseek-reasoner", "moonshot-v1-8k"],
   "homePath": ""
 }
 ```
 
-## 家目录配置
-
-PeakCode 默认使用 `~/.peakcode/` 作为家目录。你可以通过 `homePath` 自定义：
-
-```json
-"codex": {
-  "enabled": true,
-  "binaryPath": "codex",
-  "customModels": [],
-  "homePath": "/custom/path/to/peakcode"
-}
-```
-
----
-
 ## 架构概览
-
-Peak Code 采用分层客户端-服务器架构：
 
 ```text
 浏览器 / 桌面 (React + Vite + Electron)
@@ -78,7 +44,7 @@ Peak Code 采用分层客户端-服务器架构：
 ```
 
 | 层 | 关键组件 |
-| --- | --- |
+|----|----------|
 | 展示层 | React UI、Zustand 状态管理、主题系统 |
 | 应用层 | Native API、事件处理器、WebSocket 传输 |
 | 领域层 | 编排引擎、领域事件、状态投影 |

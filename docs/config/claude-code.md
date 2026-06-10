@@ -1,13 +1,11 @@
 # Claude Code 配置
 
-本页介绍如何在 Peak Code 中配置 Claude Code 代理。
-
 ## 前置条件
 
-| 项目 | 要求 |
-| --- | --- |
-| Node.js | v18+ |
-| Anthropic API Key | 有效的 API Key |
+- 已安装 Node.js（v18+）
+- 有效的 Anthropic API Key
+
+---
 
 ## 安装 Claude Code CLI
 
@@ -17,27 +15,13 @@ npm install -g @anthropic-ai/claude-code
 
 ## 配置 API Key
 
-### 方式一：命令行登录（推荐）
-
 ```bash
 claude login
 ```
 
 按照提示完成登录，API Key 会自动保存。
 
-### 方式二：手动配置
-
-编辑配置文件：
-
-```bash
-# Windows
-notepad %USERPROFILE%\.claude\settings.json
-
-# macOS / Linux
-nano ~/.claude/settings.json
-```
-
-写入：
+也可以手动配置，编辑 `~/.claude/settings.json`：
 
 ```json
 {
@@ -49,10 +33,10 @@ nano ~/.claude/settings.json
 
 ## 在 PeakCode 中启用
 
-1. 打开 PeakCode **设置**
-2. 找到 **Claude Agent** 配置区域
-3. 确保 `enabled` 为 `true`
-4. 设置 `binaryPath` 为 `claude`
+1. 启动 PeakCode 桌面应用
+2. 点击左下角 **⚙️ 设置**
+3. 找到 **Claude Agent** 配置区域
+4. 确保 `enabled` 为 `true`
 
 配置示例：
 
@@ -78,7 +62,5 @@ nano ~/.claude/settings.json
 }
 ```
 
-::: warning
-非 Anthropic 模型可能不完全兼容 Claude Code 的所有功能。
-详细配置请参考 [DeepSeek 配置指南](./deepseek)。
-:::
+> 非 Anthropic 模型可能不完全兼容 Claude Code 的所有功能。
+> 详细配置请参考 [DeepSeek 配置指南](./deepseek)。
